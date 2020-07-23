@@ -6,6 +6,7 @@ metadata:
   namespace: demo
   labels:
     app: podinfo
+    version: v1
   annotations:
     fluxcd.io/automated: "true"
     fluxcd.io/tag.init: regex:^3.10.*
@@ -25,6 +26,7 @@ spec:
         prometheus.io/port: "9797"
       labels:
         app: podinfo
+        version: v1
     spec:
       initContainers:
       - name: init
